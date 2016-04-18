@@ -1,6 +1,11 @@
 <?php
 /** 
-This is a much abreviated version created for the purpose of sharing code without getting into too much complexity. Basically you need to provide an API token appropriate for the context in which the application is launched, and use that to initialize a CanvasAPI object. I leave it to you to decide how you want to get the token. The easiest path is to issue yourself an admin level token, and hard-code it in.
+This is a much abreviated version created for the purpose of sharing code without getting into too 
+much complexity. Basically you need to provide an API token appropriate for the context in which 
+the application is launched, and use that to initialize a CanvasAPI object. 
+I leave it to you to decide how you want to get the token. The easiest path is to issue yourself an 
+admin level token, and hard-code it in. Then you can install Post'Em into any or all courses,
+and it will just work.
 **/
 session_start();
 $restore=$tokentype;//change back to originally requested type if no valid tokens are found
