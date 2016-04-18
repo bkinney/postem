@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Post'Em @UD Help</title>
+<style>
+body{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:medium;
+}
+.faq ul li{
+	list-style:none;
+	cursor:pointer;
+
+}
+li li{
+	color:red;
+}
+.faq ul li ul li{
+	list-style:circle;
+	cursor:default;
+	color:#000;
+}
+.faq ul li ol li{
+	list-style:decimal;
+	cursor:default;
+	color:#000;
+}
+.faq ul li p{
+	color:#000;
+	margin-left:
+}
+li.ui-state-error{
+	padding: 0.7em;
+	border-radius: 5px;
+	display: block;
+	list-style: none
+}
+strong{font-family: "Arial Black", Arial, sans-serif;}
+.ui-accordion .ui-accordion-header { padding:10px 30px}
+
+</style>
+<style>
+#left{width:240px;float:left;padding:5px;height:auto%; border:thick solid #2e6e9e;}
+.faq, ul,.ui-widget{padding:0;margin:0}
+#main{margin-right:10px;margin-left:280px;}
+.faq ul li ul li,.faq ul li ol li{list-style:none;
+font-weight:normal;}
+.faq ul li ol li{list-style:decimal;margin-left:10px}
+.faq ul li ul li{margin-left:10px};
+#acc div.faq ul{padding-left:6px};
+
+a.button{margin:4px;}
+h3.button{width:auto;display:inline-block;padding:8px 15px 8px 15px;margin-right:1em;}
+button{padding:7px 15px 7px 15px;font-size:110%;cursor:pointer}
+.faq ul.close-others li:first{padding-top:0;margin-top:0;}
+.faq ul li{font-weight:bold;cursor:pointer;padding-top:5px;margin-left:8px;}
+.ui-widget .faq ul li{margin-left:0}
+p.instructions{font-size:90%;background-color:#dfeffc;padding:8px;margin:0;border-top:#2e6e9e solid thin;border-bottom:#2e6e9e solid thin;font-family:Arial, Helvetica, sans-serif;}
+#left h3{margin-bottom:2;padding-bottom:0;}
+.ui-widget ul{padding-left:16px;margin-top:0;padding-top:0;}
+
+</style>
+<?php if($_GET['s']!=1): ?>
+
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+<script src='https://apps.ats.udel.edu/peer/js/jquery-ui-1.8.15.custom.min.js'></script>
+<link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/themes/redmond/jquery-ui.css' rel='stylesheet' type='text/css'>
+<?php endif ?>
+
+</head>
+
+<body>
+
+<div id="left"><h3>Glossary</h3>
+  <p class="instructions">Click on a term to reveal its definition</p>
+<div class="faq">
+<ul class="close-others glossary">
+  
+  
+   <li>Grades
+     <ul>
+       <li>The existing Canvas Gradebook. If Grades meets your needs, you should not install Post'Em for Canvas</li>
+    </ul>
+   </li>
+  
+  
+  <li>CSV
+    <ul>
+      <li>A comma-separated values file. This is the simplest filetype supported by applications such as MS Excel. Although the word 'comma' appears in the name, other characters, such as a tab or semi-colon may be used to separate columns, while new lines separate rows. Your Post'Em upload files MUST be comma separated. For best results, download the template provided by Post'Em, edit it, and re-upload.</li>
+      </ul>
+  </li>
+  
+    <li>Unpublished Files
+      <ul>
+        <li>The Canvas Files tool is used to store your Post'Em data. Post'em files are unpublished, so that students can not open them outside the context of the Post'Em tool. This prevents students from viewing one another's grades. </li>
+    </ul>
+  </li>
+  
+
+  <li>  </li>
+    <li>Student View
+      <ul>
+      <li>When a student visits the Post'Em tool, he will see his own grades, listed with one row per assignment. There are two ways to preview Post'Em as a student. Using Post'em's 'View as student', or switching to Canvas's student view. The latter will only show grades if you have awarded some to the Canvas Test Student.</li>
+      </ul>
+  </li>
+    <li>Instructor View
+      <ul>
+        <li>After uploading a csv file to Post'Em, you will see a full table containing all the data. Use the show/hide editor link if you want to hide one or more assignment columns from students. Students will never see the SSID column.</li>
+       
+        </ul>
+    </li>
+     <li>External Tool
+(aka App)
+  <ul>
+        <li>An application hosted outside of Canvas that conforms to the IMS LTI standard for interoperability. External Tools are installed by visiting the Apps tab within course Settings.</li>
+       
+        </ul>
+    </li>
+        <li>Logging out
+          <ul>
+        <li>Logging out of a Post'Em session is a good idea, especially if you have installed any other UD hosted External Tool, such as Peer Evaluation, Export Rubric Scores, or Critboard.</li>
+       
+        </ul>
+    </li>
+      
+       
+        </ul>
+    </li>
+    </ul>
+</div></div>
+<div id="main">
+<h3>Overview</h3>
+<p>Post'Em for Canvas@UD is a replacement gradebook for those who prefer to store and calculate grades on their personal computer. It is very similar to the same-named Sakai tool.  </p>
+<h3>How to Use this Page</h3>
+<p>The glossary on the left should help you understand what the features of the tool are, and how these are
+intended to be used. Step-by-Step instructions for setting up and using Post'Em as well as an FAQ can be located in the accordion panels below. Click on a panel's title to expand it. </p>
+
+<p/>
+<div id="acc">
+<h3>Step-by-Step</h3>
+<div class="faq">
+<ul class="close-others">
+<li>Installing Post'Em
+  <ol>
+  <li>Launch Canvas, and browse to the course in which you wish to use Post'Em</li>
+  <li>Click the Settings link located at the bottom of the Canvas navigation menu, located at the left side of the screen.</li>
+  <li>Click on the Navigation tab.</li>
+  <li>Locate the Post'Em item, located toward the bottom of the page. Click and drag this item into the list of active navigation links.</li>
+  <li>Scroll to the bottom of the page and click 'Save'. It is a good idea to perform this step only when you have some data to upload.</li>
+  
+  </ol>
+</li>
+<li>Download your template
+ <ol>
+  <li>Click on the Post'Em link, and click the 'Download Template' link. A file will be downloaded to your computer. The exact behavior will depend upon your choice of browser, and the preferences you have set.</li>
+  <li>Save the file in the folder of your choice on your hard drive.</li>
+  
+  
+ </ol>
+</li>
+  <li>Edit your file
+  <ol><li>Open the template file using Excel, or other spreadsheet software. Add assignment columns as needed. If necessary, you can delete or add rows, being very certain to get copy student SSIDs correctly.</li>
+      <li>Enter grade data. These can be either numbers or text.</li>
+      <li>Save your changes. DO NOT change the filetype from .csv to any other type.</li>
+      
+  </ol></li>
+  
+  <li>Upload your file
+        <ol class="show">
+        <li>If you have just finished editing your file, be sure to CLOSE IT. Excel often locks files, making them impossible to upload.</li>
+          <li>Open the Post'em tool and click 'Choose File'. Browse to the location where your .csv file is stored.</li>
+          <li>Wait for your filename to appear beside the 'Choose File' button. The Submit button should now be active.</li>
+          <li>Click 'Submit'.</li>
+          </ol>
+      </li>
+      
+      </ol>
+  </li><li>  </li>
+  <li>  </li>
+  <li></li>
+</ul>
+</div> <!-- close steps -->
+<h3>FAQ</h3>
+<div class="faq"> <p class="instructions">Click on a question to reveal its answer</p>
+<ul class="close-others">
+<li>Why can't I use the Post'Em editor to hide the SISID column?
+  <ul>
+    <li>Both the Name and SISID columns hidden in student view. Only assignment columns can be edited directly within the Post'Em tool. Students will see their names at the top of the page (replacing the title text, 'Instructor View').</li>
+  </ul></li>
+<li>What should I do if one or more students drop or add the class?
+  <ul>
+    <li>It is best to wait until after drop/add is over before downloading your course template, however, it is possible to add or remove rows from your csv prior to uploading it.</li>
+    </ul>
+</li>
+<li>What is the best way to edit an uploaded file?
+  <ul>
+    <li>Do not attempt to edit a Post'em file after upload. Instead, edit the original csv file, and re-upload. The new file will replace the existing one.</li>
+  </ul>
+</li>
+</ul>
+</div><!-- close faq -->
+</div>
+ 
+<!--END ACCORDION-->
+
+</div><!--END MAIN-->
+
+<!-- <script type="text/javascript">window.jQuery || document.write("<script src='//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'>\x3C/script><script src='js/jquery-ui-1.8.15.custom.min.js'>\x3C/script><link href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/themes/redmond/jquery-ui.css' rel='stylesheet' type='text/css'>")</script>conditionally load js and css -->
+<script type="text/javascript">
+$(document).ready(function(e) {
+	$(".faq ul:first").delegate("li","click",function(obj){
+		
+		if($(this).parent().hasClass("close-others") && $(this).children().is(':hidden') ){
+			
+			$(".faq ul li").children("ul,p").filter(':visible').toggle();
+			
+		}
+		$(this).children("ul,p").toggle();
+		
+		
+	});
+    $(".faq ul li").children("ul,p").hide();
+	 $( "#acc" ).accordion({
+		active:0,
+		collapsible: true,
+		autoHeight:false
+		});
+			$("#acc div.faq ul").delegate("li","click",function(obj){
+		
+		if($(this).parent().hasClass("close-others") && $(this).children().is(':hidden') ){
+			
+			$("#acc div.faq ul li").children().filter(':visible').toggle();
+			
+		}
+		$(this).children().toggle();
+		
+		
+	});
+	 $.fn.extend({
+  sorter: function() {
+    return this.each(function() {
+      var sorted = $(this).children('li').sort(function(a,b) {
+        // Find the list items and sort them
+        return $(a).text().toLowerCase() >
+$(b).text().toLowerCase() ? 1 : -1;
+      });
+      $(this).append(sorted);
+    });
+  }
+});
+
+$("ul.glossary").sorter();
+    $("#acc div.faq ul li").children().hide();
+	$("a.showme").show();
+});
+</script>
+
+
+</body>
+</html>
