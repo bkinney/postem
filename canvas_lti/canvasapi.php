@@ -33,9 +33,11 @@ class CanvasAPI{
 		if(!empty($_SESSION['apistatus'])){
 			if($_SESSION['apistatus']==$this->token){
 				$this->status = "using existing validation";
+				$this->error = "no errors";
 				return true;
 			}else{//check validity of new token
 				$_SESSION['apistatus']=false;//prevent recurse loop - not sure what unset would do
+				$this->status= "clearing";
 				return $this->is_valid_token();
 			}
 		}
@@ -85,7 +87,7 @@ class CanvasAPI{
 		$curl = curl_init();
 		$urip=$host.$uri;
 		if($paginate){
-			$max=200;//get as many as the server will give
+			$max=100;//get as many as the server will give
 			if(strpos($uri,"?")===false)$urip .= "?";
 			$urip .= '&page=1&per_page=' . $max;
 		}
@@ -95,6 +97,7 @@ class CanvasAPI{
 		curl_setopt($curl, CURLOPT_FOLLOWLOCATION,TRUE);
 		curl_setopt($curl, CURLOPT_HEADER,TRUE);
 		while(isset($urip)){
+			//echo $urip;
 			curl_setopt($curl, CURLOPT_URL,$urip);
 			$json = curl_exec( $curl );
 			$header_size = curl_getinfo($curl, CURLINFO_HEADER_SIZE);
@@ -123,18 +126,17 @@ class CanvasAPI{
 							$link_arr[$match[2]] = $match[1];
 						}
 					}
-					if(array_key_exists('last',$link_arr)){
-						$splitURL = explode('?', $link_arr['last']);
-						parse_str($splitURL[1],$output);
-							//next should be undefined if this is the last page, but just in case	
-							if(isset($link_arr['next'])){
+					if(isset($link_arr['next'])){
 									$urip=$link_arr['next'];
-							}
 					}
+					
+				}else{
+					continue;
 				}
 			}
+			
 	/*		print_r($link_arr);
-			if(preg_match('/^\s*<(.*?)>;\s*rel="next"/', $header, $match)){
+	if(preg_match('/^\s*<(.*?)>;\s*rel="next"/', $header, $match)){
 				$urip=$match[0];
 				//echo $urip . "<br/>";
 			}else{
@@ -210,7 +212,7 @@ class CanvasAPI{
 		if( ! $result2 = curl_exec($conn)) 
 		{ 
 			$this->error = curl_error($conn); 
-			return($this->error);
+			return($this->error . "line 213");
 			
 		} 
 	
